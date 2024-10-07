@@ -1,0 +1,96 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 22.04.0 ] */
+/* [wxMaxima: input   start ] */
+/* Every user must handle this by itself */
+file_search_lisp:append([sconcat("C:/Users/Usuario/Downloads/quadde-main","/$$$.{fasl,lisp,lsp}")],file_search_lisp)$
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+load(intde1)$
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+load(quadde)$
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+:lisp (atan 1.0d0 1)
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+atan(1),numer;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+ :lisp(defun f (x) (/ 1 (sqrt x)));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+ :lisp(defun f1 (x) (/ 1 (* x x)));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+:lisp(quadde::intde #'f 0.0d0 1.0d0 1.0d-15  0.0d0);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+:lisp(quadde::intdei #'f1 1.0d0  1.0d-15  0.0d0);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+quad_intde(1/sqrt(x),x,0,1, 'epsrel=1e-15);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+quad_intde(sin(x),x,0,%pi, 'epsrel=1e-15);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+integrate(sin(x),x,0, %pi);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+quad_intdei(exp(-x)/sqrt(x),x,0, 'epsrel=1e-15);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+gamma(1/2),numer;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+quad_intdeo(sin(x)/x,x,0, 1, 'epsrel=1e-15);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+integrate(sin(x)/x,x,0, inf);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+quad_intdeo(bessel_j(0,x)/(x^2+1)*x,x,0, 1, 'epsrel=1e-15);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+bessel_k(0,1),numer;
+/* [wxMaxima: input   end   ] */
+
+
+
+/* Old versions of Maxima abort on loading files that end in a comment. */
+"Created with wxMaxima 22.04.0"$
